@@ -19,5 +19,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::group(['namespace' => 'App\Http\Controllers\Api'], function() {
-    Route::get('/users', 'UserController@index');
+    Route::resource('/home', 'HomeController');
 });
